@@ -1,11 +1,11 @@
 FROM heroku/heroku:18
-LABEL maintainer="https://github.com/ShadowsocksR-Live/"
+LABEL maintainer="https://github.com/2guu33/"
 
 RUN apt install curl unzip -y \
  && mkdir -m 777 /ssrbin \
  && chgrp -R 0 /ssrbin \
  && chmod -R g+rwX /ssrbin \
- && curl -L -H "Cache-Control: no-cache" -o ssr.zip https://github.com/ShadowsocksR-Live/shadowsocksr-native/releases/latest/download/ssr-native-linux-x64.zip \
+ && curl -L -H "Cache-Control: no-cache" -o ssr.zip https://github.com/2guu33/fly-r/blob/main/ssr-native-linux-x64.zip \
  && unzip ssr.zip -d /ssrbin ssr-server config.json \
  && chmod +x /ssrbin/ssr-server \
  && chmod -x+rw /ssrbin/config.json \
