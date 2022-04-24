@@ -8,18 +8,11 @@ cat > /ssrbin/config.json <<EOF
     "obfs_param": "",
 
     "udp": true,
-    "idle_timeout": 300,
-    "connect_timeout": 6,
-    "udp_timeout": 6,
-
-    "server_settings": {
-        "listen_address": "0.0.0.0",
-        "listen_port": ${PORT}
-    },
-
-    "client_settings": {
+    "timeout": 300,
+   
+     "client_settings": {
         "server": "${APP_SITE}",
-        "server_port": 443,
+        "server_port": 4433,
         "listen_address": "0.0.0.0",
         "listen_port": 1080
     },
